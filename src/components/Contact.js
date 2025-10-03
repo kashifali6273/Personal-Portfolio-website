@@ -75,7 +75,7 @@ const Contact = () => {
   <p>
     <strong>LinkedIn:</strong>{" "}
     <a
-      href="www.linkedin.com/in/kashif-ali-57352b380"
+      href="https://www.linkedin.com/in/kashif-ali-57352b380"
       target="_blank"
       rel="noreferrer"
     >

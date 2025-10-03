@@ -32,7 +32,7 @@ const Hero = () => {
             <FaGithub />
           </a>
           <a
-            href="www.linkedin.com/in/kashif-ali-57352b380"
+            href="https://www.linkedin.com/in/kashif-ali-57352b380"
             target="_blank"
             rel="noopener noreferrer"
           >
