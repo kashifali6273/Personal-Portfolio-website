@@ -49,7 +49,7 @@ const Hero = () => {
               style={{ width: "24px", height: "24px" }} // ✅ Keep consistent size with icons
             />
           </a>
-          <a href="/Kashif_Ali_CV.pdf" download className="cv-btn">
+          <a href="reports/Kashif-Ali-CV.pdf" download className="cv-btn">
             <FaDownload /> Download CV
           </a>
         </div>

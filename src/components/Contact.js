@@ -96,7 +96,7 @@ const Contact = () => {
 
   <p>
     <strong>CV:</strong>{" "}
-    <a href="/Your_CV.pdf" download>
+    <a href="reports/Kashif-Ali-CV.pdf" download>
        Click to download CV
     </a>
   </p>
