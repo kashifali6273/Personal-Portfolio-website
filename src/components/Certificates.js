@@ -103,7 +103,7 @@ const Certificates = () => {
       <h2>My Certificates</h2>
       <p className="cert-intro">
         I have completed multiple specializations and professional certificates
-        from top universities and companies.You can click to verify.
+        from top universities and companies from Coursera.You can click on course name to verify.
       </p>
 
       <div className="certificates-container">

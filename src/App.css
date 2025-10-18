@@ -538,6 +538,13 @@ body::-webkit-scrollbar {
   background: #9333ea;
 }
 
+/* Hide project arrows on small screens */
+@media (max-width: 768px) {
+  .projects-nav {
+    display: none;
+  }
+}
+
 
 /* ===== Certificates Section ===== */
 .certificates {

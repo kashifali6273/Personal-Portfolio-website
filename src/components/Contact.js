@@ -94,12 +94,6 @@ const Contact = () => {
     </a>
   </p>
 
-  <p>
-    <strong>CV:</strong>{" "}
-    <a href="reports/Kashif-Ali-CV.pdf" download>
-       Click to download CV
-    </a>
-  </p>
 </div>
 
       </div>

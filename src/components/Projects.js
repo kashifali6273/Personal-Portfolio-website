@@ -109,7 +109,7 @@ const Projects = () => {
             className="project-card"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
+            transition={{ duration: 0.1, delay: index * 0.1 }}
             viewport={{ once: true }}
           >
             <h3>{project.title}</h3>

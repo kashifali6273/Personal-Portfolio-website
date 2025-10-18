@@ -1,7 +1,7 @@
 import React from "react";
 import profilePic from "../assets/profile.jpeg";
 import upworkIcon from "../assets/upwork.png"; // ✅ Import your Upwork PNG
-import { FaGithub, FaLinkedin, FaDownload } from "react-icons/fa";
+import { FaGithub, FaLinkedin,} from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -48,9 +48,6 @@ const Hero = () => {
               alt="Upwork"
               style={{ width: "24px", height: "24px" }} // ✅ Keep consistent size with icons
             />
-          </a>
-          <a href="reports/Kashif-Ali-CV.pdf" download className="cv-btn">
-            <FaDownload /> Download CV
           </a>
         </div>
       </div>

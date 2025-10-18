@@ -1,8 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaPython, FaDatabase, FaReact, FaGitAlt } from "react-icons/fa";
-import { SiTensorflow, SiPytorch, SiScikitlearn, SiFlask } from "react-icons/si";
+import { FaPython, FaDatabase, FaReact, FaGitAlt, FaHtml5, FaCss3Alt, FaJs  } from "react-icons/fa";
+import {
+  SiTensorflow,
+  SiPytorch,
+  SiScikitlearn,
+  SiFlask,
+  SiC, SiCplusplus
+} from "react-icons/si";
 import { GiArtificialIntelligence } from "react-icons/gi";
+
 
 const Skills = () => {
   const skillCategories = [
@@ -11,23 +18,40 @@ const Skills = () => {
       skills: [
         { name: "Python", level: 95, icon: <FaPython /> },
         { name: "Machine Learning", level: 90, icon: <SiScikitlearn /> },
-        { name: "Deep Learning", level: 85, icon: <SiPytorch /> },
-        { name: "Data Science & AI", level: 88, icon: <SiTensorflow /> },
-        { name: "Natural Language Processing (NLP)", level: 80, icon: <GiArtificialIntelligence /> },
+        { name: "Data Science & AI", level: 85, icon: <SiTensorflow /> },
+        { name: "Deep Learning", level: 80, icon: <SiPytorch /> },
+        
+        {
+          name: "Natural Language Processing (NLP)",
+          level: 80,
+          icon: <GiArtificialIntelligence />,
+        },
       ],
     },
     {
+      title: "Programming Languages",
+      skills: [
+        { name: "Python", level: 95, icon: <FaPython /> },
+        { name: "C", level: 90, icon: <SiC /> },
+        { name: "C++", level: 85, icon: <SiCplusplus /> },
+        { name: "HTML", level: 85, icon: <FaHtml5 /> },
+        { name: "CSS", level: 85, icon: <FaCss3Alt /> },
+        { name: "JavaScript", level: 80, icon: <FaJs /> },
+      ],
+    },
+
+    {
       title: "Web Development",
       skills: [
-        { name: "Flask (Backend Development)", level: 78, icon: <SiFlask /> },
-        { name: "React (Frontend Development)", level: 75, icon: <FaReact /> },
+        { name: "Flask (Backend Development)", level: 80, icon: <SiFlask /> },
+        { name: "React (Frontend Development)", level: 80, icon: <FaReact /> },
       ],
     },
     {
       title: "Databases & Tools",
       skills: [
-        { name: "SQL & Databases", level: 72, icon: <FaDatabase /> },
-        { name: "Git & Version Control", level: 85, icon: <FaGitAlt /> },
+        { name: "SQL & Databases", level: 75, icon: <FaDatabase /> },
+        { name: "Git & Version Control", level: 75, icon: <FaGitAlt /> },
       ],
     },
   ];
@@ -36,9 +60,13 @@ const Skills = () => {
     <section id="skills" className="skills">
       <h2>My Skills</h2>
       <p className="skills-intro">
-        I specialize in <strong>Artificial Intelligence, Machine Learning, and Data Science</strong>,
-        with experience in building intelligent systems, backend services, and full-stack applications. 
-        Below is a breakdown of my skills across core AI, web development, and supporting tools.
+        I specialize in{" "}
+        <strong>
+          Artificial Intelligence, Machine Learning, and Data Science
+        </strong>
+        , with experience in building intelligent systems, backend services, and
+        full-stack applications. Below is a breakdown of my skills across core
+        AI, web development, and supporting tools.
       </p>
 
       <div className="skills-categories">
@@ -57,7 +85,10 @@ const Skills = () => {
                       className="skill-level"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
-                      transition={{ duration: 1, delay: (catIndex * 5 + index) * 0.1 }}
+                      transition={{
+                        duration: 1,
+                        delay: (catIndex * 5 + index) * 0.1,
+                      }}
                       viewport={{ once: true }}
                     >
                       {skill.level}%
