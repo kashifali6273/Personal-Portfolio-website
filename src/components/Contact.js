@@ -60,41 +60,28 @@ const Contact = () => {
         </form>
 
         {/* Contact Info */}
-<div className="contact-info">
-  <p>
-    <strong>Email:</strong>{" "}
-    <a
-      href="https://mail.google.com/mail/?view=cm&fs=1&to=kashif7493@gmail.com"
-      target="_blank"
-      rel="noreferrer"
-    >
-      Click to send me an email
-    </a>
-  </p>
+        <div className="contact-info">
+          <div>
+            <h3>Email</h3>
+            <a href="mailto:kashif7493@gmail.com" target="_blank" rel="noreferrer">
+              kashif7493@gmail.com
+            </a>
+          </div>
 
-  <p>
-    <strong>LinkedIn:</strong>{" "}
-    <a
-      href="https://www.linkedin.com/in/kashif-ali-57352b380"
-      target="_blank"
-      rel="noreferrer"
-    >
-      Click to view LinkedIn
-    </a>
-  </p>
+          <div>
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/kashif-ali-57352b380" target="_blank" rel="noreferrer">
+              View Profile
+            </a>
+          </div>
 
-  <p>
-    <strong>GitHub:</strong>{" "}
-    <a
-      href="https://github.com/kashifali6273"
-      target="_blank"
-      rel="noreferrer"
-    >
-      Click to view GitHub
-    </a>
-  </p>
-
-</div>
+          <div>
+            <h3>GitHub</h3>
+            <a href="https://github.com/kashifali6273" target="_blank" rel="noreferrer">
+              View Projects
+            </a>
+          </div>
+        </div>
 
       </div>
     </section>

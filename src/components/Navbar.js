@@ -17,7 +17,12 @@ const Navbar = () => {
         <ul className={`nav-links ${isOpen ? "active" : ""}`}>
           {navItems.map((item) => (
             <li key={item}>
-              <a href={`#${item.toLowerCase()}`}>{item}</a>
+              <a 
+                href={`#${item.toLowerCase()}`} 
+                onClick={() => setIsOpen(false)}
+              >
+                {item}
+              </a>
             </li>
           ))}
         </ul>

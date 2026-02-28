@@ -28,7 +28,7 @@ const About = () => {
           <h2>About Me</h2>
           <p>
             I am <strong>Kashif Ali</strong>, a Computer Science student with a strong academic record 
-            (CGPA 3.61 after six semesters, Intermediate 92%, Matric 91%, ). 
+            (CGPA 3.62 after 7 semesters, Intermediate 92%, Matric 91%, ). 
             I am passionate about <span className="highlight">Artificial Intelligence</span>, 
             <span className="highlight"> Data Science</span>, and 
             <span className="highlight"> Machine Learning</span>, with a growing focus on solving 

@@ -76,23 +76,22 @@ const Skills = () => {
             <div className="skills-container">
               {category.skills.map((skill, index) => (
                 <div key={skill.name} className="skill">
-                  <div className="skill-label">
-                    <span className="skill-icon">{skill.icon}</span>
+                  <div className="skill-header">
                     <span>{skill.name}</span>
+                    <span className="skill-percentage">{skill.level}%</span>
                   </div>
                   <div className="skill-bar">
                     <motion.div
                       className="skill-level"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
+                      initial={{ width: 0, opacity: 0 }}
+                      whileInView={{ width: `${skill.level}%`, opacity: 1 }}
                       transition={{
-                        duration: 1,
-                        delay: (catIndex * 5 + index) * 0.1,
+                        duration: 1.2,
+                        delay: index * 0.1,
+                        ease: "easeOut"
                       }}
-                      viewport={{ once: true }}
-                    >
-                      {skill.level}%
-                    </motion.div>
+                      viewport={{ once: true, amount: 0.2 }}
+                    />
                   </div>
                 </div>
               ))}

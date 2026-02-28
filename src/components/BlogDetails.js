@@ -63,24 +63,24 @@ const BlogDetails = () => {
   }, [location]);
 
   return (
-    <section className="blog-details">
-      {/* Back to Home Button */}
-      <button className="back-button" onClick={() => navigate("/")}>
+    <section className="blog">
+      <h2>Blog Details</h2>
+      <button className="btn" onClick={() => navigate("/")} style={{ marginBottom: '3rem' }}>
         ⬅ Back to Home
       </button>
 
-      <h2>All Blogs</h2>
-      <div className="blog-details-container">
+      <div className="blog-container">
         {blogs.map((blog) => (
-          <div key={blog.id} id={blog.id} className="blog-detail-card">
+          <div key={blog.id} id={blog.id} className="blog-card" style={{ width: '100%', maxWidth: '900px', margin: '0 auto' }}>
             <h3>{blog.title}</h3>
-            <p className="blog-date">{blog.date}</p>
-            <p>{blog.details}</p>
+            <span className="blog-date">{blog.date}</span>
+            <p style={{ marginTop: '1.5rem' }}>{blog.details}</p>
             {blog.report && (
               <a
                 href={blog.report}
                 download
-                className="report-link"
+                className="btn"
+                style={{ marginTop: '2rem' }}
               >
                 Download Report
               </a>
