@@ -1,72 +1,92 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaPython, FaDatabase, FaReact, FaGitAlt, FaHtml5, FaCss3Alt, FaJs  } from "react-icons/fa";
 import {
-  SiTensorflow,
-  SiPytorch,
+  FaPython,
+  FaReact,
+  FaJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaGitAlt,
+  FaDatabase,
+} from "react-icons/fa";
+import {
   SiScikitlearn,
-  SiFlask,
-  SiC, SiCplusplus
+  SiPytorch,
+  SiTensorflow,
+  SiApachespark,
+  SiJupyter,
+  SiGithub,
+  SiNumpy,
+  SiPandas,
+  SiGooglecolab,
 } from "react-icons/si";
 import { GiArtificialIntelligence } from "react-icons/gi";
-
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Core AI & Machine Learning",
+      title: "Artificial Intelligence & Machine Learning",
       skills: [
-        { name: "Python", level: 95, icon: <FaPython /> },
-        { name: "Machine Learning", level: 90, icon: <SiScikitlearn /> },
-        { name: "Data Science & AI", level: 85, icon: <SiTensorflow /> },
-        { name: "Deep Learning", level: 80, icon: <SiPytorch /> },
-        
+        { name: "Machine Learning", level: 92, icon: <SiScikitlearn /> },
+        { name: "Deep Learning", level: 86, icon: <SiPytorch /> },
         {
-          name: "Natural Language Processing (NLP)",
-          level: 80,
+          name: "Artificial Intelligence",
+          level: 88,
           icon: <GiArtificialIntelligence />,
         },
+        { name: "Scikit-learn", level: 90, icon: <SiScikitlearn /> },
+        { name: "XGBoost", level: 82, icon: <SiScikitlearn /> },
+        { name: "PyTorch", level: 84, icon: <SiPytorch /> },
+        { name: "TensorFlow / Keras", level: 80, icon: <SiTensorflow /> },
       ],
     },
     {
-      title: "Programming Languages",
+      title: "Data Science",
       skills: [
         { name: "Python", level: 95, icon: <FaPython /> },
-        { name: "C", level: 90, icon: <SiC /> },
-        { name: "C++", level: 85, icon: <SiCplusplus /> },
-        { name: "HTML", level: 85, icon: <FaHtml5 /> },
-        { name: "CSS", level: 85, icon: <FaCss3Alt /> },
-        { name: "JavaScript", level: 80, icon: <FaJs /> },
-      ],
-    },
-
-    {
-      title: "Web Development",
-      skills: [
-        { name: "Flask (Backend Development)", level: 80, icon: <SiFlask /> },
-        { name: "React (Frontend Development)", level: 80, icon: <FaReact /> },
+        { name: "Pandas", level: 88, icon: <SiPandas /> },
+        { name: "NumPy", level: 88, icon: <SiNumpy /> },
+        { name: "Data Analysis", level: 86, icon: <FaDatabase /> },
+        { name: "Data Visualization", level: 84, icon: <SiJupyter /> },
+        { name: "Feature Engineering", level: 82, icon: <FaDatabase /> },
+        { name: "Data Preprocessing", level: 85, icon: <FaDatabase /> },
       ],
     },
     {
-      title: "Databases & Tools",
+      title: "Big Data & Distributed Computing",
       skills: [
-        { name: "SQL & Databases", level: 75, icon: <FaDatabase /> },
-        { name: "Git & Version Control", level: 75, icon: <FaGitAlt /> },
+        { name: "Apache Spark", level: 80, icon: <SiApachespark /> },
+        { name: "Spark ML", level: 78, icon: <SiApachespark /> },
+      ],
+    },
+    {
+      title: "Programming & Web Development",
+      skills: [
+        { name: "JavaScript", level: 82, icon: <FaJs /> },
+        { name: "React", level: 84, icon: <FaReact /> },
+        { name: "HTML", level: 86, icon: <FaHtml5 /> },
+        { name: "CSS", level: 84, icon: <FaCss3Alt /> },
+        { name: "Java", level: 72, icon: <FaJs /> },
+      ],
+    },
+    {
+      title: "Tools & Workflow",
+      skills: [
+        { name: "Jupyter", level: 90, icon: <SiJupyter /> },
+        { name: "VS Code", level: 90, icon: <FaGitAlt /> },
+        { name: "Google Colab", level: 88, icon: <SiGooglecolab /> },
+        { name: "Git / GitHub", level: 86, icon: <SiGithub /> },
       ],
     },
   ];
 
   return (
     <section id="skills" className="skills">
-      <h2>My Skills</h2>
+      <h2>Skills</h2>
       <p className="skills-intro">
-        I specialize in{" "}
-        <strong>
-          Artificial Intelligence, Machine Learning, and Data Science
-        </strong>
-        , with experience in building intelligent systems, backend services, and
-        full-stack applications. Below is a breakdown of my skills across core
-        AI, web development, and supporting tools.
+        I focus on <strong>AI, machine learning, data science</strong>, and
+        practical software engineering, with experience building intelligent
+        systems and data-driven applications.
       </p>
 
       <div className="skills-categories">
@@ -77,7 +97,9 @@ const Skills = () => {
               {category.skills.map((skill, index) => (
                 <div key={skill.name} className="skill">
                   <div className="skill-header">
-                    <span>{skill.name}</span>
+                    <span>
+                      {skill.icon} {skill.name}
+                    </span>
                     <span className="skill-percentage">{skill.level}%</span>
                   </div>
                   <div className="skill-bar">
@@ -87,8 +109,8 @@ const Skills = () => {
                       whileInView={{ width: `${skill.level}%`, opacity: 1 }}
                       transition={{
                         duration: 1.2,
-                        delay: index * 0.1,
-                        ease: "easeOut"
+                        delay: index * 0.08,
+                        ease: "easeOut",
                       }}
                       viewport={{ once: true, amount: 0.2 }}
                     />

@@ -12,7 +12,7 @@ const Contact = () => {
         "service_3rckd3h", // ✅ Your EmailJS Service ID
         "template_z9xgeek", // ✅ Replace with your actual Template ID
         form.current,
-        "61jzPoN7gsSi99afv" // ✅ Your Public Key
+        "61jzPoN7gsSi99afv", // ✅ Your Public Key
       )
       .then(
         () => {
@@ -22,17 +22,17 @@ const Contact = () => {
         (error) => {
           console.error(error.text);
           alert("❌ Failed to send message. Please try again.");
-        }
+        },
       );
   };
 
   return (
     <section id="contact" className="contact">
-      <h2>Contact Me</h2>
+      <h2>Contact</h2>
       <p className="contact-intro">
-        If you’d like to get in touch regarding opportunities, collaborations,
-        or admissions, please use the form below or connect with me directly
-        through email and social links.
+        Open to meaningful opportunities, collaborations, internships, and
+        technical projects in AI, machine learning, data science, and software
+        development.
       </p>
 
       <div className="contact-container">
@@ -63,26 +63,37 @@ const Contact = () => {
         <div className="contact-info">
           <div>
             <h3>Email</h3>
-            <a href="mailto:kashif7493@gmail.com" target="_blank" rel="noreferrer">
+            <a
+              href="mailto:kashif7493@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               kashif7493@gmail.com
             </a>
           </div>
 
           <div>
             <h3>LinkedIn</h3>
-            <a href="https://www.linkedin.com/in/kashif-ali-57352b380" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com/in/kashif-ali-57352b380"
+              target="_blank"
+              rel="noreferrer"
+            >
               View Profile
             </a>
           </div>
 
           <div>
             <h3>GitHub</h3>
-            <a href="https://github.com/kashifali6273" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/kashifali6273"
+              target="_blank"
+              rel="noreferrer"
+            >
               View Projects
             </a>
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 import Blog from "./components/Blog";
-import BlogDetails from "./components/BlogDetails"; // new page
+import BlogDetails from "./components/BlogDetails";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -16,7 +17,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Home Page with all sections */}
         <Route
           path="/"
           element={
@@ -24,6 +24,7 @@ function App() {
               <Navbar />
               <Hero />
               <About />
+              <Education />
               <Skills />
               <Projects />
               <Certificates />
@@ -34,7 +35,6 @@ function App() {
           }
         />
 
-        {/* Blog details page */}
         <Route path="/blogs" element={<BlogDetails />} />
       </Routes>
     </Router>

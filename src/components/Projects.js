@@ -6,80 +6,49 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Multilingual Code-Mixed Sentiment Analysis",
-      description:
-        "Fine-tuned XLM-RoBERTa on multilingual code-mixed datasets (English + Roman Urdu) for sentiment classification. Research-focused project demonstrating expertise in NLP and multilingual AI.",
-      link: "https://github.com/kashifali6273/Code-Mixed-Sentiment-Analysis-using-XLM-RoBERTa",
-    },
-    {
       title: "AI-Powered Resume Matcher & Job Monitoring System",
       description:
-        "Flask-based web platform that matches resumes with job descriptions, provides AI-driven feedback, and monitors job postings in real-time with automated email alerts.",
+        "A Flask-based application that matches resumes with job descriptions, gives feedback on fit, and monitors relevant opportunities with automated alerts.",
       link: "https://github.com/kashifali6273/AI-Powered-Resume-Matcher-and-Job-Monitoring-System",
+      tech: "Python, Flask, AI, NLP",
+    },
+    {
+      title: "Multilingual Code-Mixed Sentiment Analysis",
+      description:
+        "A research-focused NLP project using XLM-RoBERTa for sentiment classification on multilingual code-mixed datasets, with emphasis on real-world text understanding.",
+      link: "https://github.com/kashifali6273/Code-Mixed-Sentiment-Analysis-using-XLM-RoBERTa",
+      tech: "Python, Transformers, NLP, Deep Learning",
     },
     {
       title: "Monitoring Vegetation Changes in Punjab Using NDVI and CNN",
       description:
-        "Used NDVI and a pre-trained CNN to detect vegetation changes between 2018–2022, with heatmaps showing significant environmental shifts.",
+        "A geospatial and AI project using NDVI and convolutional models to analyze regional vegetation changes and visualize environmental patterns.",
       link: "https://github.com/kashifali6273/Monitoring-Vegetation-Changes-in-Punjab-Using-NDVI-and-CNN",
+      tech: "Python, CNN, Remote Sensing, Data Analysis",
     },
     {
       title: "Personalized Learning Recommendation System",
       description:
-        "AI-powered system combining supervised, unsupervised, and reinforcement learning to recommend study resources and paths tailored to student performance and learning styles.",
+        "An intelligent recommendation system designed to tailor learning paths using data-driven analysis of student performance and learning needs.",
       link: "https://github.com/kashifali6273/Personalized-Learning-Recommendation-System",
+      tech: "Python, Machine Learning, Recommendation Systems",
     },
     {
-      title: "AI Co-Founder",
+      title: "Twitter Sentiment Analysis with Big Data",
       description:
-        "An intelligent assistant that helps brainstorm, validate, and support startup ideas using AI-driven insights and LLM-powered reasoning.",
-      link: "https://github.com/kashifali6273/AI-Co-Founder",
-    },
-    {
-      title: "Twitter Sentiment Analysis with Big Data (Spark + FastAPI + React)",
-      description:
-        "End-to-end big data pipeline analyzing Twitter sentiment using Apache Spark, served via FastAPI backend and React frontend.",
+        "An end-to-end big data pipeline for sentiment analysis, combining Apache Spark, FastAPI, and React to process and present social media insights.",
       link: "https://github.com/kashifali6273/Twitter-Sentiment-Analysis-with-Big-Data-Spark-FastAPI-React",
+      tech: "Spark, FastAPI, React, Python",
     },
     {
       title: "AI Health Assistant",
       description:
-        "Streamlit-based app that predicts Diabetes and Heart Disease risk using trained ML models. Features a clean UI and is easily extendable for future enhancements.",
+        "A Streamlit-based disease risk prediction application that applies machine learning models to provide practical health insight in a user-friendly interface.",
       link: "https://github.com/kashifali6273/AI-Health-Assistant-Disease-Risk-Prediction-with-Streamlit",
-    },
-    {
-      title: "E-commerce Sales Analysis",
-      description:
-        "Data analysis project uncovering sales trends, customer segmentation, and forecasting insights using Python and visualization libraries.",
-      link: "https://github.com/kashifali6273/Ecommerce-Sales-Analysis",
-    },
-    {
-      title: "A/B Testing Experiment Analysis",
-      description:
-        "Designed and analyzed A/B testing experiments to optimize conversion rates, applying statistical methods and visualization for insights.",
-      link: "https://github.com/kashifali6273/A-B-Testing-Experiment-Analysis-and-Optimization",
-    },
-    {
-      title: "Wheat Yield Prediction",
-      description:
-        "Machine learning model predicting wheat yield based on environmental and soil features, showcasing AI in agriculture.",
-      link: "https://github.com/kashifali6273/Wheat-Yield-Prediction",
-    },
-    {
-      title: "Personal Expense Tracker",
-      description:
-        "Flask-based multi-user expense tracker with budgeting, filtering, editing, and PDF reporting functionality.",
-      link: "https://github.com/kashifali6273/Personal-Expense-Tracker",
-    },
-    {
-      title: "Mood Tracker Application",
-      description:
-        "Python application for tracking emotions, analyzing mood data, and exporting reports in CSV/PDF format.",
-      link: "https://github.com/kashifali6273/Mood-Tracker-",
+      tech: "Python, Streamlit, Machine Learning",
     },
   ];
 
-  // Scroll helper
   const scroll = (direction) => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;
@@ -93,27 +62,30 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects">
-      <h2>My Projects</h2>
+      <h2>Featured Projects</h2>
 
-      {/* Arrows */}
       <div className="projects-nav">
-        <button onClick={() => scroll("left")} className="scroll-btn">⬅</button>
-        <button onClick={() => scroll("right")} className="scroll-btn">➡</button>
+        <button onClick={() => scroll("left")} className="scroll-btn">
+          ⬅
+        </button>
+        <button onClick={() => scroll("right")} className="scroll-btn">
+          ➡
+        </button>
       </div>
 
-      {/* Horizontal Scrollable Container */}
       <div className="projects-scroll" ref={scrollRef}>
         {projects.map((project, index) => (
           <motion.div
-            key={index}
+            key={project.title}
             className="project-card"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.1, delay: index * 0.1 }}
+            transition={{ duration: 0.25, delay: index * 0.08 }}
             viewport={{ once: true }}
           >
             <h3>{project.title}</h3>
             <p>{project.description}</p>
+            <div className="project-tech">{project.tech}</div>
             <a href={project.link} target="_blank" rel="noreferrer">
               View Project
             </a>
