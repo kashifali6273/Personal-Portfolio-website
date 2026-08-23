@@ -5,7 +5,7 @@ const Education = () => {
     {
       title: "MSc Data Science & Artificial Intelligence",
       institution: "Université Côte d’Azur, France",
-      status: "Incoming / Starting 2026",
+      status: "Currently Enrolled",
       details:
         "Pursuing advanced study in machine learning, AI, data science, and applied intelligent systems.",
     },
